@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>USUARIOS</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12" id="dvMenu">
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">ADMINISTRACIÓN DE USUARIOS</h3>
+                        </div>
+                        <form id="frmUsuarios">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS DEL USUARIO</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtUsuarioID">USUARIOID</label>
+                                                    <input type="number" class="form-control" id="txtUsuarioID" placeholder="ID del usuario">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtNombre">NOMBRE</label>
+                                                    <input type="text" class="form-control" id="txtNombre" placeholder="Nombre de usuario">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtCorreo">CORREO</label>
+                                                    <input type="email" class="form-control" id="txtCorreo" placeholder="Correo electrónico del usuario">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="cboRol">ROL</label>
+                                                    <select class="form-control" id="cboRol">
+                                                        <option value="0">SELECCIONE UN ROL</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtContrasena">CONTRASEÑA</label>
+                                                    <input type="password" class="form-control" id="txtContrasena" placeholder="Contraseña">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtConfirmarContrasena">CONFIRMAR CONTRASEÑA</label>
+                                                    <input type="password" class="form-control" id="txtConfirmarContrasena" placeholder="Confirmar contraseña">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtSalt">SALT</label>
+                                                    <input type="text" class="form-control" id="txtSalt" placeholder="Salt">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="cboEstado">ESTADO</label>
+                                                    <select class="form-control" id="cboEstado">
+                                                        <option value="0">SELECCIONE UN ESTADO</option>
+                                                        <option value="Activo">Activo</option>
+                                                        <option value="Inactivo">Inactivo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Nuevo campo FechaCreacion -->
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtFechaCreacion">FECHA DE CREACIÓN</label>
+                                                    <input type="date" class="form-control" id="txtFechaCreacion">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Campos para Cliente -->
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS DEL CLIENTE</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtNombreCliente">NOMBRE DEL CLIENTE</label>
+                                                    <input type="text" class="form-control" id="txtNombreCliente" placeholder="Nombre del cliente">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtTelefono">TELÉFONO</label>
+                                                    <input type="text" class="form-control" id="txtTelefono" placeholder="Teléfono del cliente">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtDireccion">DIRECCIÓN</label>
+                                                    <input type="text" class="form-control" id="txtDireccion" placeholder="Dirección del cliente">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtCedula">CÉDULA</label>
+                                                    <input type="text" class="form-control" id="txtCedula" placeholder="Cédula del cliente">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-danger">
+                                    <div class="card-header">
+                                        <h3 class="card-title">PROCESO</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('POST', 'Insertar')">INSERTAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('PUT', 'Actualizar')">ACTUALIZAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary" onclick="EjecutarComando('DELETE', 'Eliminar')">ELIMINAR</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <br />
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary" onclick="Consultar()">CONSULTAR</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Tabla para mostrar usuarios -->
+                    <div class="card card-secondary mt-3">
+                        <div class="card-header">
+                            <h3 class="card-title">LISTA DE USUARIOS</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-striped" id="tblUsuarios">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Correo</th>
+                                        <th>Rol</th>
+                                        <th>Estado</th>
+                                        <th>Fecha de Creación</th> <!-- Agregar la columna para FechaCreacion -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Filas dinámicas llenadas por IQueryable -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="Scripts/Menu.js"></script>
+    <script src="Scripts/Comunes/CRUD.js"></script>
+    <script src="Scripts/Comunes/Comunes.js"></script>
+    <script src="Scripts/Usuario.js"></script>
+</body>
+</html>
